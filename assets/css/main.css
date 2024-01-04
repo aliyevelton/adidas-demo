@@ -1,0 +1,661 @@
+html,
+body {
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.header-container {
+  height: 80px;
+  width: 100%;
+  padding: 0 40px;
+  position: relative;
+}
+.header-container .adidas-logo {
+  display: flex;
+  align-items: center;
+  width: 70px;
+  position: absolute;
+  top: 20.5px;
+}
+.header-container .adidas-logo svg {
+  width: 60px;
+  cursor: pointer;
+}
+.header-container .header__top {
+  height: 32px;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.header-container .header__top a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+.header-container .header__top li {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.header-container .header__top li button {
+  height: 32px;
+  width: 42px;
+  padding: 0 10px;
+  border: none;
+  background-color: transparent;
+}
+.header-container .header__top li:hover {
+  text-decoration: underline;
+}
+.header-container .header__top .language-selector {
+  padding: 0;
+}
+.header-container .header__bottom {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  height: 48px;
+}
+.header-container .header__bottom ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  box-sizing: border-box;
+  height: 47px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-right: 120px;
+  padding: 0;
+}
+.header-container .header__bottom ul li {
+  padding: 10px;
+}
+.header-container .header__bottom ul li a {
+  text-decoration: none;
+  color: black;
+}
+.header-container .header__bottom ul .gifts {
+  font-weight: 100;
+}
+.header-container .header__bottom ul .sale {
+  font-weight: 100;
+}
+.header-container .header__bottom ul .three-stripe {
+  font-weight: 100;
+}
+.header-container .header__bottom__right {
+  display: flex;
+  align-items: center;
+}
+.header-container .header__bottom__right__search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eceff1;
+  padding: 0 35px 0px 10px;
+  position: relative;
+  height: 32px;
+}
+.header-container .header__bottom__right__search input {
+  background-color: #eceff1;
+  border: none;
+  height: 30px;
+  width: 183px;
+  outline: none;
+}
+.header-container .header__bottom__right__search input::placeholder {
+  color: black;
+}
+.header-container .header__bottom__right__search input:focus::placeholder {
+  color: transparent;
+}
+.header-container .header__bottom__right__search i {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+.header-container .header__bottom__right .icons {
+  display: flex;
+  align-items: center;
+}
+.header-container .header__bottom__right .icons span {
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header-container .header__bottom__right .icons span .notification-icon {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #FFD619;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation: bounce 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  7% {
+    transform: translateY(-7px);
+  }
+  13% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-7px);
+  }
+  27% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.banner {
+  height: 600px;
+  width: 100%;
+  background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/promo_ss23_endofseasonsale_en_mh_large_d_1a6f64ae86.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.banner h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 40px;
+}
+.banner .container {
+  margin: 0 64px;
+  width: 550px;
+  position: absolute;
+  left: 5px;
+}
+.banner .container .content .shop-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 20px;
+  height: 50px;
+  width: fit-content;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.75);
+}
+.banner .container .content .shop-button:hover {
+  color: #767677;
+  transition-duration: 400ms;
+}
+.banner .container .content div i {
+  padding-left: 5px;
+}
+
+.carousel-shoes {
+  padding: 0 110px;
+}
+.carousel-shoes .container-buttons {
+  margin-top: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.carousel-shoes .container-buttons .buttons {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+.carousel-shoes .container-buttons .buttons button {
+  padding: 12px;
+  border: 1px solid black;
+  font-weight: 600;
+  font-size: 16px;
+}
+.carousel-shoes .container-buttons .buttons .new-arrival {
+  background-color: white;
+  margin: 0 8px 0 0;
+}
+.carousel-shoes .container-buttons .buttons .new-arrival:hover {
+  background-color: black;
+  color: white;
+}
+.carousel-shoes .container-buttons .buttons .trending {
+  background-color: black;
+  color: white;
+}
+.carousel-shoes .container-buttons .view-all {
+  width: fit-content;
+  height: 44px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.carousel-shoes .container-buttons .view-all a {
+  color: black;
+  font-size: 18px;
+}
+.carousel-shoes .container-buttons .view-all a:hover {
+  color: white;
+  background-color: black;
+}
+.carousel-shoes .cards {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid #eceff1;
+}
+.carousel-shoes .cards a:hover {
+  border: 1px solid black;
+}
+.carousel-shoes .cards a:hover .card-item .price {
+  transform: translateY(-5px);
+  transition-duration: 500ms;
+  transform-style: ease-in-out;
+}
+.carousel-shoes .cards a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 10px;
+  border: 1px solid transparent;
+}
+.carousel-shoes .cards a .card-item {
+  height: 278px;
+  width: 278px;
+  position: relative;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.carousel-shoes .cards a .card-item img {
+  height: 278px;
+  width: 278px;
+  object-fit: cover;
+}
+.carousel-shoes .cards a .card-item .button-wrapper {
+  height: 24px;
+  width: 27px;
+  margin: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.carousel-shoes .cards a .card-item .button-wrapper button {
+  background-color: initial;
+  border: none;
+}
+.carousel-shoes .cards a .card-item .price {
+  background-color: white;
+  color: black;
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+}
+.carousel-shoes .cards a .card-content {
+  padding: 0 0 0 10px;
+  height: 108px;
+  width: 278px;
+  display: flex;
+  flex-direction: column;
+}
+.carousel-shoes .cards a .card-content .shoe-title {
+  font-size: 16px;
+  margin: 10px 0 0;
+}
+.carousel-shoes .cards a .card-content .shoe-collection {
+  font-size: 16px;
+  margin: 5px 5px 0 0;
+  color: #767677;
+}
+.carousel-shoes .cards a .card-content .product-info {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.carousel-cards {
+  padding: 0 110px;
+  height: 534.6px;
+}
+.carousel-cards .cards {
+  display: flex;
+  justify-content: space-between;
+}
+.carousel-cards .cards a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+}
+.carousel-cards .cards a .card-item {
+  width: 290.5px;
+  height: 388px;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.carousel-cards .cards a .card-item img {
+  width: 290.5px;
+  height: 388px;
+  object-fit: cover;
+}
+.carousel-cards .cards a .card-content {
+  display: flex;
+  flex-direction: column;
+  width: 290.5px;
+  height: 100px;
+  margin-top: 10px;
+}
+.carousel-cards .cards a .card-content p {
+  margin: 0;
+  padding: 0;
+}
+.carousel-cards .cards a .card-content .card-title {
+  font-size: 16px;
+  text-decoration: none;
+  height: 29px;
+  width: 290.5px;
+  margin-bottom: 5px;
+}
+.carousel-cards .cards a .card-content .card-description {
+  font-size: 13px;
+  text-decoration: none;
+}
+.carousel-cards .cards a .card-content .wrapper {
+  height: 100%;
+  width: 290.5px;
+  font-size: 14px;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.carousel-cards .cards a .card-content .wrapper .shop-now {
+  width: fit-content;
+}
+.carousel-cards .cards a .card-content .wrapper .shop-now:hover {
+  color: white;
+  background-color: black;
+  transition-duration: 200ms;
+}
+
+.keywords {
+  height: 320px;
+  padding: 0 110px;
+  margin: 30px 0 70px;
+}
+.keywords .keywords-heading h2 {
+  font-weight: 600;
+}
+.keywords .popular-keywords .row .keyword-column {
+  display: flex;
+  padding: 0;
+  margin: 65px 0 0;
+}
+.keywords .popular-keywords .row .keyword-column a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 0 -1px 0;
+  border-bottom: 1px solid black;
+  width: 360px;
+  padding: 0 0 6.4px 0;
+}
+.keywords .popular-keywords .row .keyword-column a:hover {
+  box-shadow: 0px 7px 0 0 black;
+}
+
+.text-paragraph {
+  padding: 40px 110px;
+  background-color: #F5F5E4;
+}
+.text-paragraph .text-wrapper .text-container .first-row h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text-paragraph .text-wrapper .text-container .first-row p {
+  font-size: 16px;
+}
+.text-paragraph .text-wrapper .text-container .first-row .left-column {
+  padding-left: 0;
+}
+.text-paragraph .text-wrapper .text-container .first-row .right-column {
+  padding-right: 0;
+}
+
+footer .footer-newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 100%;
+  padding: 40px;
+  background-color: #EDE735;
+}
+footer .footer-newsletter span {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 35px 15px 0;
+}
+footer .footer-newsletter .sign-up-form .sign-up-button {
+  background-color: black;
+  color: white;
+  border: none;
+  width: 220px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+  outline: none;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.75);
+}
+footer .footer-newsletter .sign-up-form .sign-up-button:hover {
+  color: #767677;
+  transition-duration: 400ms;
+}
+
+.footer-container {
+  height: 440px;
+  width: fit-content;
+  padding: 20px 0 0;
+  margin: 0 213px;
+}
+.footer-container .footer-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 420px;
+}
+.footer-container .footer-ul a {
+  text-decoration: none;
+  color: black;
+}
+.footer-container .footer-ul .footer-cards {
+  height: 420px;
+  width: fit-content;
+  padding: 20px 15px 30px;
+}
+.footer-container .footer-ul .footer-cards ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer-container .footer-ul .footer-cards ul span {
+  font-size: 14px;
+  white-space: nowrap;
+}
+.footer-container .footer-ul .footer-cards ul span:hover {
+  text-decoration: underline;
+}
+.footer-container .footer-ul .footer-cards ul .social-media-icon {
+  height: 33.5px;
+}
+.footer-container .footer-ul .footer-cards h5 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  height: 120.66px;
+  padding: 15px 0;
+  background-color: #282c31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-bottom .legal-menu {
+  margin: 0;
+  padding: 0;
+  height: 53.66px;
+  width: fit-content;
+  list-style-type: none;
+  display: flex;
+}
+.footer-bottom .legal-menu li {
+  height: 23.664px;
+  margin: 15px 0;
+  padding: 0 15px;
+}
+.footer-bottom .legal-menu .privacy {
+  border-left: 1px solid #D3D7DA;
+  border-right: 1px solid #D3D7DA;
+}
+.footer-bottom .legal-menu a {
+  text-decoration: none;
+  color: #D3D7DA;
+  font-size: 12px;
+}
+.footer-bottom .legal-menu svg {
+  height: 23.664px;
+  width: 40px;
+}
+.footer-bottom .copyright-text {
+  padding: 20px 15px 0;
+  color: #D3D7DA;
+  font-size: 12px;
+}
+
+.modal-content {
+  border-radius: 0;
+  position: relative;
+}
+.modal-content .modal-body {
+  border: none;
+  padding: 20px;
+}
+.modal-content .modal-body .banner-adiclub {
+  margin-bottom: 20px;
+}
+.modal-content .modal-body .close-button {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: white;
+}
+.modal-content .modal-body .modal-title {
+  font-size: 34px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.modal-content .modal-body .modal-subtitle {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 15px 0 0;
+}
+.modal-content .modal-body .form-title {
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 15px 0;
+}
+.modal-content .modal-body .social-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+.modal-content .modal-body .social-buttons button {
+  height: 50px;
+  width: 56px;
+  border-width: 1px;
+  background-color: white;
+  padding: 0 15px;
+}
+.modal-content .modal-body .social-buttons button img {
+  height: 24px;
+  width: 24px;
+}
+.modal-content .modal-body .email-input {
+  margin-top: 15px;
+  width: 100%;
+  height: 54px;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 0 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  outline: none;
+}
+.modal-content .modal-body .email-input input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+}
+.modal-content .modal-body .email-input input::placeholder {
+  font-size: 16px;
+}
+.modal-content .modal-body .continue-button {
+  margin: 15px 0 0;
+  background-color: black;
+  color: white;
+  border: none;
+  width: 155px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+  outline: none;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.75);
+}
+.modal-content .modal-body .continue-button:hover {
+  color: #767677;
+  transition-duration: 400ms;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,800 @@
+@import "colors.scss";
+@import "mixins.scss";
+
+
+$font-family: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+
+html,
+body {
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  box-sizing: border-box;
+}
+
+.header-container {
+  height: 80px;
+  width: 100%;
+  padding: 0 40px;
+  position: relative;
+
+  .adidas-logo {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    position: absolute;
+    top: 20.5px;
+
+    svg {
+      width: 60px;
+      cursor: pointer;
+    }
+  }
+
+  .header__top {
+    height: 32px;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+      }
+
+      li {
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+
+        button {
+          height: 32px;
+          width: 42px;
+          padding: 0 10px;
+          border: none;
+          background-color: transparent;
+        }
+      }
+
+      li:hover {
+        text-decoration: underline;
+      }
+
+      .language-selector {
+        padding: 0;
+      }
+  }
+
+  .header__bottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    height: 48px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+      box-sizing: border-box;
+      height: 47px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin: 0;
+      margin-right: 120px;
+      padding: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        padding: 10px;
+      }
+
+      .gifts {
+        font-weight: 100;
+      }
+
+      .sale {
+        font-weight: 100;
+      }
+
+      .three-stripe {
+        font-weight: 100;
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      &__search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #eceff1;
+        padding: 0 35px 0px 10px;
+        position: relative;
+        height: 32px;
+        input {
+          background-color: #eceff1;
+          border: none;
+          height: 30px;
+          width: 183px;
+          outline: none;
+        }
+
+        input::placeholder {
+          color: black;
+        }
+
+        input:focus::placeholder {
+          color: transparent;
+        }
+
+        i {
+          cursor: pointer;
+          position: absolute;
+          right: 10px;
+        }
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+
+        span {
+          cursor: pointer;
+          height: 48px;
+          width: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          .notification-icon {
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background-color: #FFD619;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+
+            animation: bounce 3s;
+            animation-iteration-count: infinite;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  7% {
+    transform: translateY(-7px);
+  }
+  13% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-7px);
+  }
+  27% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.banner {
+  height: 600px;
+  width: 100%;
+  background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/promo_ss23_endofseasonsale_en_mh_large_d_1a6f64ae86.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 0 40px
+  }
+
+  .container {
+    margin: 0 64px;
+    width: 550px;
+    position: absolute;
+    left: 5px;
+
+    .content {
+      .shop-button {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        cursor: pointer;
+        outline: none;
+        margin-top: 20px;
+        height: 50px;
+        width: fit-content;
+        box-shadow: 3px 3px rgba(0, 0, 0, 0.75);
+      }
+
+      .shop-button:hover {
+        color: #767677;
+        transition-duration: 400ms;
+      }
+
+      div {
+        i {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.carousel-shoes {
+  padding: 0 110px;
+
+  .container-buttons {
+    margin-top: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      height: 44px;
+
+      button {
+        padding: 12px;
+        border: 1px solid black;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .new-arrival {
+        background-color: white;
+        margin: 0 8px 0 0;
+      }
+
+      .new-arrival:hover {
+        background-color: black;
+        color: white;
+      }
+
+      .trending {
+        background-color: black;
+        color: white;
+
+      }
+    }
+
+    .view-all {
+      width: fit-content;
+      height: 44px;
+      display: flex;
+      flex-direction: column-reverse;
+
+      a {
+        color: black;
+        font-size: 18px;
+      }
+
+      a:hover {
+        color: white;
+        background-color: black;
+      }
+    }
+
+  }
+
+  .cards {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid #eceff1;
+
+    a:hover {
+      border: 1px solid black;
+
+      .card-item {
+        .price {
+          transform: translateY(-5px);
+          transition-duration: 500ms;
+          transform-style: ease-in-out;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      padding-bottom: 10px;
+      border: 1px solid transparent;
+
+      .card-item {
+        height: 278px;
+        width: 278px;
+        position: relative;
+        align-items: flex-start;
+        box-sizing: border-box;
+
+        img {
+          height: 278px;
+          width: 278px;
+          object-fit: cover;
+        }
+
+        .button-wrapper {
+          height: 24px;
+          width: 27px;
+          margin: 10px;
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          button {
+            background-color: initial;
+            border: none;
+          }
+        }
+
+        .price {
+          background-color: white;
+          color: black;
+          position: absolute;
+          bottom: 0px;
+          left: 5px;
+        }
+
+      }
+
+      .card-content {
+        padding: 0 0 0 10px;
+        height: 108px;
+        width: 278px;
+        display: flex;
+        flex-direction: column;
+
+        .shoe-title {
+          font-size: 16px;
+          margin: 10px 0 0;
+          ;
+        }
+
+        .shoe-collection {
+          font-size: 16px;
+          margin: 5px 5px 0 0;
+          color: #767677;
+        }
+
+        .product-info {
+          font-size: 14px;
+          margin: 5px 0 0;
+        }
+      }
+    }
+  }
+}
+
+.carousel-cards {
+  padding: 0 110px;
+  height: 534.6px;
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: black;
+      margin-right: 10px;
+
+      .card-item {
+        width: 290.5px;
+        height: 388px;
+        align-items: flex-start;
+        box-sizing: border-box;
+
+        img {
+          width: 290.5px;
+          height: 388px;
+          object-fit: cover;
+        }
+      }
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        width: 290.5px;
+        height: 100px;
+        margin-top: 10px;
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+
+        .card-title {
+          font-size: 16px;
+          text-decoration: none;
+          height: 29px;
+          width: 290.5px;
+          margin-bottom: 5px;
+        }
+
+        .card-description {
+          font-size: 13px;
+          text-decoration: none;
+        }
+
+        .wrapper {
+          height: 100%;
+          width: 290.5px;
+          font-size: 14px;
+          text-decoration: underline;
+          letter-spacing: 2px;
+          font-weight: 600;
+          display: flex;
+          flex-direction: column-reverse;
+
+          .shop-now {
+            width: fit-content;
+          }
+
+          .shop-now:hover {
+            color: white;
+            background-color: black;
+            transition-duration: 200ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+.keywords {
+  height: 320px;
+  padding: 0 110px;
+  margin: 30px 0 70px;
+
+  .keywords-heading {
+    h2 {
+      font-weight: 600;
+
+    }
+
+  }
+
+  .popular-keywords {
+
+    .row {
+      .keyword-column {
+        display: flex;
+        padding: 0;
+        margin: 65px 0 0;
+
+        a {
+          display: flex;
+          text-decoration: none;
+          color: black;
+          font-size: 40px;
+          font-weight: 600;
+          letter-spacing: 2px;
+          margin: 0 0 -1px 0;
+          border-bottom: 1px solid black;
+          width: 360px;
+          padding: 0 0 6.4px 0;
+        }
+
+        a:hover {
+          box-shadow: 0px 7px 0 0 black;
+        }
+      }
+
+    }
+  }
+
+}
+
+.text-paragraph {
+  padding: 40px 110px;
+  background-color: #F5F5E4;
+
+  .text-wrapper {
+    .text-container {
+      .first-row {
+        h1 {
+          font-size: 28px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        .left-column {
+          padding-left: 0;
+        }
+
+        .right-column {
+          padding-right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+footer {
+  .footer-newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    padding: 40px;
+    background-color: #EDE735;
+
+    span {
+      font-size: 30px;
+      font-weight: 600;
+      margin: 0 35px 15px 0;
+    }
+
+    .sign-up-form {
+      .sign-up-button {
+        background-color: black;
+        color: white;
+        border: none;
+        width: 220px;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        padding: 6px 12px;
+        outline: none;
+        box-shadow: 3px 3px rgba(0, 0, 0, 0.75);
+
+      }
+
+      .sign-up-button:hover {
+        color: #767677;
+        transition-duration: 400ms;
+      }
+    }
+  }
+}
+
+.footer-container {
+  height: 440px;
+  width: fit-content;
+  padding: 20px 0 0;
+  margin: 0 213px;
+
+  .footer-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 420px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .footer-cards {
+        height: 420px;
+        width: fit-content;
+        padding: 20px 15px 30px;
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+          span {
+            font-size: 14px;
+            white-space: nowrap;
+          }
+
+          span:hover {
+            text-decoration: underline;
+          }
+
+
+          .social-media-icon {
+            height: 33.5px;
+          }
+        }
+        h5 {
+          font-size: 18px;
+          font-weight: 800;
+          margin-bottom: 10px;
+        }
+      }
+
+  }
+}
+
+.footer-bottom {
+  height: 120.66px;
+  padding: 15px 0;
+  background-color: #282c31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .legal-menu {
+    margin: 0;
+    padding: 0;
+    height: 53.66px;
+    width: fit-content;
+    list-style-type: none;
+    display: flex;
+    li {
+      height: 23.664px;
+      margin: 15px 0;
+      padding: 0 15px;
+    }
+    .privacy {
+      border-left: 1px solid #D3D7DA;
+      border-right: 1px solid #D3D7DA;
+    }
+    a {
+      text-decoration: none;
+      color: #D3D7DA;
+      font-size: 12px;
+    }
+
+    svg {
+      height: 23.664px;
+      width: 40px;
+    }
+  }
+
+  .copyright-text {
+    padding: 20px 15px 0;
+    color: #D3D7DA;
+    font-size: 12px;
+  }
+}
+
+
+.modal-content {
+  border-radius: 0;
+  position: relative;
+  .modal-body {
+    border: none;
+    padding: 20px;
+
+    .banner-adiclub{
+      margin-bottom: 20px;
+    }
+
+    .close-button {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background-color: white;
+
+    }
+
+    .modal-title {
+      font-size: 34px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .modal-subtitle {
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin: 15px 0 0;
+    }
+
+    .form-title {
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin: 15px 0;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 15px;
+      button {
+        height: 50px;
+        width: 56px;
+        border-width: 1px;
+        background-color: white;
+        padding: 0 15px;
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+
+    .email-input {
+      margin-top: 15px;
+      width: 100%;
+      height: 54px;
+      border: 1px solid black;
+      border-radius: 0;
+      padding: 0 15px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      outline: none;
+
+      input {
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+      }
+      input::placeholder {
+        font-size: 16px;
+      }
+    }
+
+    .continue-button {
+      margin: 15px 0 0;
+      background-color: black;
+      color: white;
+      border: none;
+      width: 155px;
+      height: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      padding: 6px 12px;
+      outline: none;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    .continue-button:hover {
+      color: #767677;
+      transition-duration: 400ms;
+    }
+  }
+
+}
